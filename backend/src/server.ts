@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import connectDB from '../lib/connectDB';
 import express, { Express, Request, Response } from 'express';
-import mongoose from 'mongoose';
 import cors from 'cors';
 import helmet from 'helmet';
 import authRoutes from './routes/auth.routes';
