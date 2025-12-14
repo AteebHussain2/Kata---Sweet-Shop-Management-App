@@ -141,5 +141,39 @@ To create an admin user:
     └── vite.config.ts     # Vite configuration
 ```
 
+
+## 🚀 Deployment
+
+### deployed on Vercel (Frontend & Backend) + MongoDB Atlas
+Detailed deployment instructions are available in [deploy_workflow.md](./deploy_workflow.md).
+
+**Quick Steps:**
+1.  **Database**: Create a MongoDB Atlas cluster and get the URI.
+2.  **Backend**: Deploy the `backend` folder to Vercel (add `MONGO_URI`, `JWT_SECRET`).
+3.  **Frontend**: Deploy the `frontend` folder to Vercel (add `VITE_API_URL`).
+
+## 📸 Screenshots
+
+*(Add your screenshots here. The following were verified during development)*
+-   **Admin Dashboard**: Shows product management and stock levels.
+-   **User View**: Shows purchase options.
+-   **Mobile View**: Fully responsive design.
+
+## 🤖 My AI Usage
+
+**Tools Used:**
+-   **Google Gemini**: Primary AI coding assistant for code generation, refactoring, and debugging.
+
+**How I Used Them:**
+-   **Boilerplate Generation**: Used Gemini to generate the initial Express server setup, Mongoose schemas, and React component structures (Layout, Navbar).
+-   **Refactoring**: Leveraged AI to refactor the monolithic `Dashboard.tsx` into smaller, modular components (`SweetCard`, `SweetGrid`) and to implement the "Glassmorphism" design system.
+-   **Troubleshooting**: Used Gemini to diagnose and fix TypeScript errors in `connectDB.ts` and resolve `npm install` issues on Windows.
+-   **Deployment Strategy**: Consulted AI to adapt the Express backend for Vercel Serverless functions (creating `vercel.json` and `api/index.ts`).
+
+**Reflection:**
+AI significantly accelerated the development process, particularly in handling repetitive boilerplate code and configuring complex CSS frameworks (Tailwind/Shadcn). It allowed me to focus more on the business logic (RBAC, stock management) rather than fighting with syntax. However, I learned that manual verification is crucial, especially for infrastructure usage (DB connections) and strictly typing external libraries.
+
+---
+
 ## 🛡️ License
 This project is part of a coding kata and is available for educational purposes.
